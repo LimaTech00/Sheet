@@ -5,7 +5,7 @@ import java.io.*;
 public class Backup {
 
     public void generateBackup() {
-        String filePath = "";
+        String filePath = "C:\\SomaPDV\\Backup";
         String username = "root";
         String password = "@soma+";
         String databaseName = "db000";
