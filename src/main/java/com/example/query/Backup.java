@@ -2,12 +2,14 @@ package com.example.query;
 
 import java.io.*;
 
+import javax.swing.JOptionPane;
+
 public class Backup {
 
     public void generateBackup() {
         String filePath = "C:\\SomaPDV\\Backup";
         String username = "root";
-        String password = "@soma+";
+        String password = JOptionPane.showInputDialog("Insira a senha do banco");
         String databaseName = "db000";
         String command = String.format("cmd.exe /c mysqldump -u %s -p%s --databases %s -r \"%s\"",
                 username, password, databaseName, filePath);

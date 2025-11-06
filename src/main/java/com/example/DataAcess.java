@@ -10,7 +10,7 @@ public class DataAcess {
     public Connection connectionDB() {
         try {
             String username = "root";
-            String storedPassword = "@soma+";
+            String storedPassword = JOptionPane.showInputDialog("Insira a senha do banco");
             String bancoCliente = JOptionPane.showInputDialog("Insira o numero do cliente");
             String url = "jdbc:mysql://localhost:3306/db" + bancoCliente;
             return DriverManager.getConnection(url, username, storedPassword);
